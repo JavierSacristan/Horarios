@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Plantilla curso con Grid Layout</title>
+        <link rel="icon" type="image/png" href="calculadora.png" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="crud2017.css">
+        <script src="js/funciones.js" defer></script> 
+    </head>
+
+    <body>
+        <div class="container"> 
+            <header class="header">
+                <h1 id="titulo">C R U D con Array de objetos -- curso 2021/2022</h1>
+            </header>
+
+            <nav class="columna2">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <!--  <li onclick="actualiza()">Fotos</li>-->
+                    <li>Creación del Horario</li>
+                    <li>Cisualizar Horario</li>
+                </ul>
+
+            </nav>
+
+            <section   class="columna1">
+                <article class="cajaarticulo">
+                    <span class="labeltitulo1">Profesor</span>
+                    <div class="labelelemento1"><input type="text" id="cNombre"/></div>
+
+                    <span class="labeltitulo2">Asignatura</span>
+                    <div class="labelelemento2"><input type="text" id="cAsignatura" required=""/></div>
+
+                    <span class="labeltitulo3">Dia de la Semana</span>
+                    <div class="labelelemento3">
+                        <select id="cDias">
+                            <option value="1">Lunes</option>
+                            <option value="2">Martes</option>
+                            <option value="3">Miercoles </option>
+                            <option value="4">Jueves </option>
+                            <option value="5">Viernes</option>
+                        </select>
+                    </div>
+
+                    <span class="labeltitulo4">Hora :</span>
+                    <div class="labelelemento4">
+                        
+                          <select id="cHora">
+                            <option value="1">8 h.</option> 
+                            <option value="2">9 h.</option>
+                            <option value="3">10 h.</option> 
+                            <option value="4">11:30 h.</option>
+                            <option value="5">12:13 h.</option> 
+                        </select>
+
+                    <div class="labeltitulo5"></div>
+                    <br>
+                    <span class="labelelemento5"><input type="button" id="bGrabar" value ="Grabar" /></span>
+                    <span class="labelelemento5"><input type="button" id="bLimpiar" value ="Limpiar" /></span>
+                </article>
+                <article class="cajaarticulo,  ">
+                    <table style="border: #c610e6 solid 2px; width: 100%">
+                        <tr style="border: #999999 solid 3px" >
+                            <th>Horario<th>
+                            <th style="border: #009999 solid 3px">Lunes</th>
+                            <th style="border: #009999 solid 3px">Martes</th>
+                            <th style="border: #009999 solid 3px">Miercoles</th>
+                            <th style="border: #009999 solid 3px">Jueves</th>
+                            <th style="border: #009999 solid 3px" >Viernes</th>
+                            </tr>
+                            <tr>
+                            <th style="border:  black solid 3px"> 8 <td>
+                            <td id="c11" style="border: #009999 solid 3px"> </td>
+                            <td id="c12" style="border: #009999 solid 3px"> </td>
+                            <td id="c13" style="border: #009999 solid 3px"> </td>
+                            <td id="c14" style="border: #009999 solid 3px"> </td>
+                            <td id="c15" style="border: #009999 solid 3px" > </td>
+                            </tr>
+                            <tr>
+                            <th   style="border:  black solid 3px"> 9 <td>
+                            <td id="c21"  style="border: #009999 solid 3px"> </td>
+                            <td id="c22"  style="border: #009999 solid 3px"> </td>
+                            <td id="c23"  style="border: #009999 solid 3px"> </td>
+                            <td id="c24"  style="border: #009999 solid 3px"> </td>
+                            <td id="c25"  style="border: #009999 solid 3px" > </td>
+                            </tr>
+                            <th style="border:  black solid 3px"> 10 <td>
+                            <td id="c31"  style="border: #009999 solid 3px"> </td>
+                            <td id="c32"  style="border: #009999 solid 3px"> </td>
+                            <td id="c33"  style="border: #009999 solid 3px"> </td>
+                            <td id="c34"  style="border: #009999 solid 3px"> </td>
+                            <td id="c35"  style="border: #009999 solid 3px" > </td>
+                            </tr>
+                               <th style="border:  black solid 3px"> 11:30 <td>
+                            <td id="c41"  style="border: #009999 solid 3px"> </td>
+                            <td id="c42"  style="border: #009999 solid 3px"> </td>
+                            <td id="c43"  style="border: #009999 solid 3px"> </td>
+                            <td id="c44"  style="border: #009999 solid 3px"> </td>
+                            <td id="c45"  style="border: #009999 solid 3px" > </td>
+                            </tr>
+                               <th style="border:  black solid 3px"> 12:30<td>
+                            <td id="c51"  style="border: #009999 solid 3px"> </td>
+                            <td id="c52"  style="border: #009999 solid 3px"> </td>
+                            <td id="c53"  style="border: #009999 solid 3px"> </td>
+                            <td id="c54"  style="border: #009999 solid 3px"> </td>
+                            <td id="c55"  style="border: #009999 solid 3px" > </td>
+                            </tr>
+                    </table>
+                </article>
+            </section>
+
+            <aside class="columna3">
+                <blockquote>C R U D</blockquote>
+                <blockquote>Create Read Udpate Delete</blockquote>
+                <p>Escribir el nombre del profesor.</p>
+                <p>El nombre de la asignatura se autocompleta directamente al pulsar el boton grabar.</p>
+                <p>Si el nombre del profesor no es valido se vacian ambos campos.</p>
+            </aside>
+            <footer class="columna4">
+                CIFP Santa Catalina &copy; 2021-2022
+            </footer>
+
+
+        </div>
+
+        <script>
+
+           
+        </script>
+    </body>
+</html>
