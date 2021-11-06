@@ -7,7 +7,6 @@ window.onload = function(){
     limpiar=document.getElementById("bLimpiar");
     cDias=document.getElementById("cDias");
     cHoras=document.getElementById("cHora");
-    td=document.querySelectorAll("td");
 
     var fila=1;
     var columna=1;
@@ -72,12 +71,9 @@ window.onload = function(){
 
         document.getElementById("c"+fila+columna).innerHTML=asignatura.value;
         
-    }
-
-    //por cada elemento td de la tabla le añado el evento que llama a 
-    //la funcion recuperar informacion
-    for (var i = 0; i < td.length; i++){
-        td[i].addEventListener("click",recuperarInformacion,false);
+        //Correccion del error, ahora le paso la funcion solo a los
+        //campos de la tabla en los que se ha insertado algo
+        document.getElementById("c"+fila+columna).addEventListener("click",recuperarInformacion,false);
     }
 
     //funcion que a traves del id del campo busca en el map 
